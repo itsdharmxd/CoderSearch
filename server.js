@@ -1,22 +1,41 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const passport = require('passport');
+
+
+
 const app = express();
-const db=require('./config/keys').mongoURI
+
+
+
+const db = require('./config/keys').mongoURI
+const bodyParser = require('body-parser');
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
+
+
 
 
 const posts = require('./routes/api/posts');
-const profie = require('./routes/api/profile');
+const profile = require('./routes/api/profile');
 const users = require('./routes/api/users');
 
 
 
+// passport middleware
+
+app.use(passport.initialize());
+
+require('./config/passport.js')(passport);
 
 
 
-app.get('/', (req, res) => res.send('Hello'));
 
+//routes
 app.use('/api/users', users);
-app.use('/api/profile', profie);
+app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 
