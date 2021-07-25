@@ -12,7 +12,8 @@ class Register extends Component {
     constructor() {
         super();
       
-        this.state = {
+      this.state = {
+            git:'',  //
             name: '',
             email: '',
             password: '',
@@ -39,7 +40,7 @@ class Register extends Component {
           email :this.state.email,
           password :this.state.password,
           password2 :this.state.password2,
-
+           git:this.state.git
         }
 
        this.props.registerUser(newUser,this.props.history)
@@ -90,6 +91,15 @@ class Register extends Component {
                       value={this.state.email}
                       onChange={this.onChange}
                       error={errors.email}
+                    />
+
+                     <TextFieldGroup
+                      placeholder="Git Hub Handle"
+                    name="git"
+                      type="name"
+                      value={this.state.git}
+                      onChange={this.onChange}
+                      error=''
                     />
                 <TextFieldGroup
                       placeholder="Password"

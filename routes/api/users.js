@@ -8,7 +8,7 @@ const passport = require('passport');
 
 const validateRegisterInput=require('../../validation/register')
 const validateLoginInput=require('../../validation/login')
-
+const isEmpty=require('../../validation/is-empty')
 
 const jwt = require('jsonwebtoken');
 const keys=require('../../config/keys')
@@ -33,8 +33,8 @@ router.post('/register', (req, res) => {
     if (!isValid) {
         return res.status(400).json(errors);
     }
-
-
+   
+   
    
    
     User.findOne({ email: req.body.email }).then(user => {
@@ -42,12 +42,18 @@ router.post('/register', (req, res) => {
             errors.email='Email already exist'
             return res.status(400).json(errors);
         } else {
-            const avatar = gravatar.url(req.body.email, {
-                s: '200',
-                r: 'pg',
-                d:'mm'
-           })
- 
+            // const avatar = gravatar.url(req.body.email, {
+            //     s: '200',
+            //     r: 'pg',
+            //     d:'mm'
+            // })
+            
+  const avatar = !isEmpty(req.body.git)
+         ? `https://avatars.githubusercontent.com/${req.body.git }?s=200`
+         : `https://ui-avatars.com/api/?name=${req.body.name
+             .replace(/\s\s+/g, ' ')
+             .split(' ')
+             .join('+')}&size=200`;
 
             const newUser = new User({
                 name: req.body.name,
