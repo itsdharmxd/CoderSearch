@@ -59,20 +59,20 @@ export default  class Trie{
 	}
 }
 //Head is Created her to make its scope Global .
-const head = new Trie();
-head.add("dharmesh");
-head.add("dharmehh");
-head.add("dharmeshdharmes");
-head.add("dharresh");
-head.add("dharmedd");
+// const head = new Trie();
+// head.add("dharmesh");
+// head.add("dharmehh");
+// head.add("dharmeshdharmes");
+// head.add("dharresh");
+// head.add("dharmedd");
 
 
-head.add("upadhyay");
-head.add("soumya");
-head.add("pandey");
-head.add("lalit");
-head.add("dubey");
-head.findPostFix('dhar')
-console.log(head.list)
-head.findPostFix('soum')
-console.log(head.list)
+// head.add("upadhyay");
+// head.add("soumya");
+// head.add("pandey");
+// head.add("lalit");
+// head.add("dubey");
+// head.findPostFix('dhar')
+// console.log(head.list)
+// head.findPostFix('soum')
+// console.log(head.list)

@@ -141,9 +141,9 @@ class CreateProfile extends Component {
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Create Your Profile</h1>
               <p className="lead text-center">
-                Let's get some information to make your profile stand out
+                Let's get some information to make your profile 
               </p>
-              <small className="d-block pb-3">* = required fields</small>
+              <small className="d-block pb-3">*required</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* Profile Handle"
@@ -151,7 +151,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique handle for your profile URL."
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -160,7 +160,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info=" your career"
                 />
                 <TextFieldGroup
                   placeholder="Company"
@@ -184,7 +184,7 @@ class CreateProfile extends Component {
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
+                  info="City or state (eg. Mumbai ,Kolkata)"
                 />
                 <TextFieldGroup
                   placeholder="* Skills"
@@ -201,7 +201,7 @@ class CreateProfile extends Component {
                   value={this.state.githubusername}
                   onChange={this.onChange}
                   error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
+                  info="If you want your latest repos and a Github link, include your userhandle"
                 />
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
@@ -222,7 +222,7 @@ class CreateProfile extends Component {
                     }}
                     className="btn btn-light"
                   >
-                    Add Social Network Links
+                    Add Social Accounts Links
                   </button>
                   <span className="text-muted">Optional</span>
                 </div>

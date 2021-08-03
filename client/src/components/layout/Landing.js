@@ -28,7 +28,7 @@ class Landing extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1 className="display-3 mb-4 " style={{fontWeight:'bolder'}} >Developer Connector
+            <h1 className="display-3 mb-4 " style={{fontWeight:'bolder'}} > Search Coders
             </h1>
             {/* <p className="lead"> Create a developer profile/portfolio, share posts and get help from other developers</p> */}
             <hr />

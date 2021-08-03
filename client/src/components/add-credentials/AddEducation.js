@@ -74,7 +74,7 @@ class AddEducation extends Component {
               <p className="lead text-center">
                 Add any school, bootcamp, etc that you have attended
               </p>
-              <small className="d-block pb-3">* = required fields</small>
+              <small className="d-block pb-3">*required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* School"

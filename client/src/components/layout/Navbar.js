@@ -70,8 +70,8 @@ const authLinks = (
   <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
     <div className="container">
               <Link className="navbar-brand" to="/">
-                <i class="fas fa-code"></i>
-    <span>  DevConnector </span> </Link>
+                <i class=" "  > <img style={{width:'50px' , height:'50px'}}  src="./icon.png" ></img></i>
+    <span>  CoderSearch </span> </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -81,7 +81,7 @@ const authLinks = (
           <li className="nav-item">
                     <Link className="nav-link" to="/profiles">
               <i className="fas fa-users"></i>
-               <span> Developers  </span> 
+               <span> Coders  </span> 
             </Link>
           </li>
 

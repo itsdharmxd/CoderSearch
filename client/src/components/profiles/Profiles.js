@@ -78,9 +78,9 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
+              <h1 className="display-4 text-center">Coders Profiles</h1>
               <p className="lead text-center">
-                Browse and connect with developers
+                Browse and connect with Coders
                 <div className="form-outline" style={{width:'400px' }} >
   <input name='search'  autoCorrect="off"   value={this.state.search}   onChange={this.onChange}  type="search" id="form1"  style={{width:'400px', }}  className="form-control" autoComplete={false} placeholder="Search ..."
                     aria-label="Search" />
