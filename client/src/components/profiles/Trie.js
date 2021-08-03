@@ -1,7 +1,5 @@
   
-class Node{
-	//Alphabet Size = 26 .
-    
+class Node{    
 	constructor(){
 		this.isEnd = false ;
 		this.child = [] ;
@@ -10,20 +8,12 @@ class Node{
 		}
 	}
 }
-export default  class Trie{
-      
-
-
-
-    
-	
+export default  class Trie{	
 	constructor(){
 		this.root = new Node() ;
 		this.list = [] ;
-	}
-	
+	}	
 	add( str ) {
-
 		let curr = this.root ;
 		for( var i=0;i<str.length;i++ ) {
 			var index = str.charCodeAt(i) - 97 ;
@@ -31,10 +21,8 @@ export default  class Trie{
 			if( curr.child[index]==null ) curr.child[index] = new Node() ;
 			curr = curr.child[index] ;	
 		}
-
 		curr.isEnd = true ;
 	}
-	//this helper() is used to generate all possible postfix for given prefix String :
 	helper( curr , postfix , prefix ) {
 		if( curr.isEnd==true ) 
 			this.list.push(prefix+postfix) ;
@@ -45,7 +33,6 @@ export default  class Trie{
 				postfix = postfix.substring( 0 , postfix.length-1 ) ;
 			}
 	}
-	
 	findPostFix( prefix ) {
 		this.list = [] ;
 		let curr = this.root ;
